@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Gather action="C7Handler.php" numDigits="2">
+        <Say voice="alice" language="en-GB">To Confirm Your Appointment, Press 1.</Say>
+        <Say voice="alice" language="en-GB">If you need to speak to the Receptionist, Press 2.</Say>
+	    <Say voice="alice" language="en-GB">If you can not make it to your appointment, press 3.</Say>  
+		
+		
+    </Gather>
+    <!-- If customer doesn't input anything, prompt and try again. -->
+    <Say voice="alice" language="en-GB">Sorry, I didn't get your response.</Say>
+    <Redirect method="GET">AppointmentReminderMenuRound2.xml</Redirect>
+</Response>

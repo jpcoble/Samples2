@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Gather action="Handle3.php" numDigits="1">
+        <Say voice="alice" language="en-GB">Welcome to the Coble Law Office Voice Case Information System. You will need your 7 digit case
+		number to use this system. When prompted to enter your case number, enter only numbers. Do not enter the hyphen. Do not enter
+		any letters.</Say>
+        <Say voice="alice" language="en-GB">If you have filed a Chapter 7 Bankruptcy, press 1.</Say>
+	    <Say voice="alice" language="en-GB">If you have filed a Chapter 13 Bankruptcy, press 2.</Say>   
+		
+    </Gather>
+    <!-- If customer doesn't input anything, prompt and try again. -->
+    <Say>Sorry, I didn't get your response.</Say>
+    <Redirect>handle-incoming-call.xml</Redirect>
+</Response>

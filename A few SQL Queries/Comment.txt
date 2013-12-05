@@ -1,0 +1,17 @@
+These stored procedures and function are pretty old (about 3 years). I was over-excited about SQL Server at the time. 
+In more recent times, I have used SQL Server just to get the data right for Excel when it comes to calculations since
+I often need to make changes to formulas on the fly, while a client is sitting in front of me. Excel is better-fitted
+for such creativity with numbers in quick situations. 
+
+While I have been using Excel for about 20 years (Lotus 1-2-3 before),
+there are actually some calculations that are better done in SQL Server. An example would be the Chapter 13 Bankruptcy
+Pot Test. Excel seems too "flat" for the task. I wish I could find the SQL that I once wrote for the Pot Test. Most mortgage
+companies still do not have software that is up to the task and even if they did, they would need a web-service (maybe Rest)
+to link to the Trustee's data. It is difficult to exeplain, but the fact is, if you have both pro rata secured payments
+AND fixed secured payments (secured fixed payments are een most of the time after the 2005 act); almost every part of the calculation can
+change on a monthly basis. You might call it a very "unstable" and "multi-dimensional" amortization. As a matter of fact,
+Creditors prefer "fixed" payments over "pro rata" payments even though secured creditors would normally be paid quicker
+with "pro rata." The reason they prefer "fixed" payments is because they can not figure out how to account for "pro rata"
+payments. I do not know if the National Data Center (keeps up with all Chapter 13 bankruptcies) provides a Rest service
+for creditors. If such a service is not provided, they should scrape the National Data Center. Just don't ask me to write
+the scraper or the SQL. I work ONLY for the debtors.

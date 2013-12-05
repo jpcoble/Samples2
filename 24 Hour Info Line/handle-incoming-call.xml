@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Gather action="handle-user-input.php" numDigits="1">
+        <Say voice="alice" language="en-GB">Welcome to the Coble Law Office 24 Hour Information Line.</Say>
+        <Say voice="alice" language="en-GB">For General Bankruptcy Information, press 1.</Say>
+        <Say voice="alice" language="en-GB">For Information on Stopping Foreclosures, press 2.</Say>
+        <Say voice="alice" language="en-GB">For Information on Stopping Repossessions, press 3.</Say>
+		<Say voice="alice" language="en-GB">For Information on Stopping Lawsuits and Garnishments, press 4.</Say>
+		<Say voice="alice" language="en-GB">For Information on Stopping Harassing Phone Calls, press 5.</Say>
+		<Say voice="alice" language="en-GB">For Information on Handling Back Taxes, press 6.</Say>
+		<Say voice="alice" language="en-GB">For Information on Handling Back Child Support, press 7.</Say>
+		<Say voice="alice" language="en-GB">To Be Connected to the Office, press 8.</Say>
+		<Say voice="alice" language="en-GB">To Hear This Menu Again, press 9.</Say>
+		
+    </Gather>
+    <!-- If customer doesn't input anything, prompt and try again. -->
+    <Say>Sorry, I didn't get your response.</Say>
+    <Redirect>handle-incoming-call.xml</Redirect>
+</Response>

@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Coblelaw Communicator";
+}
+
+<h2>@ViewBag.Home</h2>
+<p>
+    <b>COBLELAW COMMUNICATOR</b>
+</p>
+
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider">Navigation</li>
+    <li>@Html.ActionLink("Home", "Home", "Home")</li>
+    <li>@Html.ActionLink("Text Out", "Index", "TextOut")</li>
+    <li>@Html.ActionLink("Voice Out", "Index", "VoiceOut")</li>
+</ul>

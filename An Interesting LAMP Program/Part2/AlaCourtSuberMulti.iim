@@ -1,0 +1,35 @@
+﻿VERSION BUILD=7401110 RECORDER=FX
+TAB T=1
+TAB CLOSEALLOTHERS
+FRAME F=1
+TAG POS=1 TYPE=A ATTR=ID:UcMenu1_tvMainMenun2
+CMDLINE !DATASOURCE SuberBeer.csv 
+SET !DATASOURCE_COLUMNS 3
+SET !LOOP 1
+SET !DATASOURCE_LINE {{myloop1}}
+SET !ERRORIGNORE YES
+WAIT SECONDS={{Mydelay2}}
+TAG POS=1 TYPE=SELECT FORM=ACTION:frmcaselookupform.aspx?code=CASE ATTR=ID:ContentPlaceHolder1_UcCaseLookup1_ddlCounty CONTENT=%{{!COL1}}
+TAG POS=1 TYPE=SELECT FORM=ACTION:frmcaselookupform.aspx?code=CASE ATTR=ID:ContentPlaceHolder1_UcCaseLookup1_ddlDivision CONTENT=%{{!COL2}}
+TAG POS=1 TYPE=INPUT:TEXT FORM=ACTION:frmcaselookupform.aspx?code=CASE ATTR=ID:ContentPlaceHolder1_UcCaseLookup1_txtCaseNumber CONTENT=={{!COL3}}
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:form1 ATTR=ID:ContentPlaceHolder1_UcCaseLookup1_btnCaseSearch
+WAIT SECONDS={{Mydelay2}}
+TAG POS=1 TYPE=SPAN ATTR=ID:__tab_ContentPlaceHolder1_CaseDetailTabs_TabParties
+WAIT SECONDS={{Mydelay}}
+TAG POS=1 TYPE=A ATTR=ID:ContentPlaceHolder1_CaseDetailTabs_TabParties_tvPartiesn1
+WAIT SECONDS={{Mydelay2}}
+SAVEAS TYPE=CPL FOLDER=/var/www FILE=SuberBeer.htm
+TAB OPEN NEW
+TAB T=2
+SET !TIMEOUT_PAGE 240
+URL GOTO=http://127.0.0.1/SuberParser4.php
+SET !ERRORIGNORE NO
+WAIT SECONDS={{Mydelay}}
+TAB T=1
+TAB CLOSEALLOTHERS
+WAIT SECONDS={{Mydelay}}
+
+
+
+
+

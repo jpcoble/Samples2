@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Gather action="C13Handler.php" numDigits="2">
+        <Say voice="alice" language="en-GB">Welcome to the Chapter 13 Information System</Say>
+        <Say voice="alice" language="en-GB">For General Information about your Case, Press 1.</Say>
+	    <Say voice="alice" language="en-GB">For Information about your Meeting of Creditors, press 2.</Say>  
+		<Say voice="alice" language="en-GB">For Information about your Confirmation Hearing, press 3.</Say> 	
+		<Say voice="alice" language="en-GB">For Information about your Confirmation Date, press 4.</Say> 
+		<Say voice="alice" language="en-GB">For information about other Court Hearings, press 5.</Say> 
+		<Say voice="alice" language="en-GB">For information about your filing fee payments, press 6.</Say> 
+		<Say voice="alice" language="en-GB">For information about your Current Chapter 13 Plan Payments, press 7.</Say> 
+		<Say voice="alice" language="en-GB">If your Chapter 13 Payments have been suspended, press 8.</Say> 
+		
+    </Gather>
+    <!-- If customer doesn't input anything, prompt and try again. -->
+    <Say>Sorry, I didn't get your response.</Say>
+    <Redirect method="GET">handle-incoming-call.xml</Redirect>
+</Response>

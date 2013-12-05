@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MobileComm.Models.VoiceOut>
+
+@{
+    ViewBag.Title = "Alice Call";
+}
+
+<h2><b>Alice Call</b></h2>
+
+<table>
+    
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            Message:
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Message)
+        </td>
+        </tr>
+    <tr>
+        <td>
+            Number:
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number)
+        </td>
+        </tr>
+    <tr>
+        <td>
+            Name:
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        </tr>
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) 
+            
+        </td>
+    </tr>
+}
+
+</table>

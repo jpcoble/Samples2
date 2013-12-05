@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Gather action="C7Handler.php" numDigits="2">
+        <Say voice="alice" language="en-GB">Welcome to the Chapter 7 Information System</Say>
+        <Say voice="alice" language="en-GB">For General Information about your Case, Press 1.</Say>
+	    <Say voice="alice" language="en-GB">For Information about your Meeting of Creditors, press 2.</Say>  
+		<Say voice="alice" language="en-GB">For your Expected Discharge Date, press 3.</Say> 	
+		<Say voice="alice" language="en-GB">For Information about Court Hearings, press 4.</Say> 
+		<Say voice="alice" language="en-GB">For information about your filing fee payments, press 5.</Say> 
+		<Say voice="alice" language="en-GB">For whether you have completed your financial management course, press 6.</Say> 
+		
+    </Gather>
+    <!-- If customer doesn't input anything, prompt and try again. -->
+    <Say>Sorry, I didn't get your response.</Say>
+    <Redirect method="GET">handle-incoming-call.xml</Redirect>
+</Response>
